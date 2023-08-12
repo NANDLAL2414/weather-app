@@ -8,13 +8,20 @@
 }
 
 body{
+    background-color: #000;
+}
+.title{
+    color:blue;
+    text-align: center;
+    margin-top:50px;
+    font-size: 35px;
+}
+.parent-container{
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000;
 }
-
 .container{
     width: 400px;
     height: min-content;
@@ -105,12 +112,8 @@ body{
     align-items: center;
 }
 
-.humidity{
-    margin-left: 20px;
-}
-
-.wind{
-    margin-right: 20px;
+.wind i{
+    margin-left: 5x;
 }
 
 .weather-details i{
@@ -142,4 +145,16 @@ body{
 }
 .location-not-found img{
     width: 80%;
+}
+
+@media only screen and (max-width: 480px){
+    .container{
+        width: 300px;
+    }
+    .weather-details{
+        width: 96%;
+    }
+    .title{
+        font-size: 25px;
+    }
 }
