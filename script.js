@@ -20,6 +20,7 @@ async function checkWeather(city){
     if(weather_data.cod === `404`){
         location_not_found.style.display = "flex";
         weather_body.style.display = "none";
+        weather_img.src = "assets/404.png";
         console.log("error");
         return;
     }
@@ -30,7 +31,6 @@ async function checkWeather(city){
 
     humidity.innerHTML = `${weather_data.main.humidity}%`;
     wind_speed.innerHTML = `${weather_data.wind.speed}Km/H`;
-
 
     switch(weather_data.weather[0].main){
         case 'Clouds':
@@ -48,7 +48,6 @@ async function checkWeather(city){
         case 'Snow':
             weather_img.src = "assets/snow.png";
             break;
-
     }
 }
 
